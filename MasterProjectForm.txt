@@ -1,0 +1,14 @@
+Title of Master's Project:
+Implementation and Improvement of K-truss decomposition for Social Network
+
+Faculty Member Supervising:
+
+Course Number: 610
+Credit Hours: 3
+
+Grading Scheme: Letter
+
+Description of Master's Project
+In the analysis of social network, it is interesting to find a group of closely connected nodes. This group can be a k-clique, k-truss, or k-core. In this project, we concentrate on the k-truss related algorithms. First, classic algorithms is analyzed and implemented. Then based on the most recent literatures, some improvements may be introduced and the algorithm will be optimized. If possible, parallel approaches will also be tested to further improve the algorithm efficiency.
+
+

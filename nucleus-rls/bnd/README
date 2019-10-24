@@ -1,0 +1,87 @@
+- 'make' to compile
+
+- './binucleus <graph> <algorithm> <hierarchy?>" to run;
+		 <graph> is the bipartite input graph in matrix market (.mtx) [1] or edge list format (SNAP) [2]. It can be a binary file as well [3].
+		 <algorithm> is LEFT_TIP, RIGHT_TIP or WING. LEFT or RIGHT indicates the position of vertices in the input file; for "45 51" edge in the input file, 45 is a left vertex and 51 is a right vertex.
+		 <hierarchy> is YES or NO. YES computes the hierarchy, subgraphs, and densities. NO computes only K values.
+
+- When <hierarchy> is YES, there are 2 output files
+		- <graph>_<algorithm>_Hierarchy: Runtimes, statistics, and significantly dense subgraphs, i.e., subgraph is a leaf, its size on each side is larger or equal to LOWERBOUND (set to 0 in main.h), and its density is at least THRESHOLD value (set to 0.0 in main.h)
+		- <graph>_<algorithm>_NUCLEI: Each line is a subgraph, first 8 numbers are: subgraph id, K value, |LeftV|, |RightV|, |E|, edge density, 1 (0) if the nucleus is (not) a leaf in the hierarchy, and parent subgraph id. Following numbers are vertices
+		 (if algorithm is LEFT_TIP or RIGHT_TIP), or edges (if it is WING). Upper limits for *TIPs is 200 vertices (VERTEXUPPERBOUND in main.h) and for WING it's 3000 edges (EDGEUPPERBOUND in main.h)
+
+- In a *_RIGHT_TIP_Hierarchy file, consider the following line;
+"id: 7  K: 52  |PV|: 5  |SV|: 18  |E|: 52  ed: 0.58  LEAF?: 1  parent id: 6	5 6 7 8 9 -1"
+It means the subgraph with id 7 has K value of 52, and it has 5 primary (right) vertices, 18 secondary (left) vertices, 52 edges with 0.58 edge density (52/(5*18)). The subgraph is a leaf in the hierarchy and its parent is the subgraph with the id of 6. Following five numbers are the vertex ids in the primary set.
+
+- In a *_WING_Hierarchy file, consider the following line;
+"id: 8  K: 11 |PV|: 4  |SV|: 5  |E|: 19  ed: 0.95  LEAF?: 0  parent id: 7       3 2  3 3  3 4  3 6  5 1  5 2  5 3  5 4  5 6  6 1  6 2  6 3  6 4  6 6  8 1  8 2  8 3  8 4  8 6  -1"
+It means the subgraph with id 8 has K value of 11, and it has 4 primary (selected side is mentioned at the top of this *_WING_Hierarchy file) vertices, 5 secondary vertices, 19 edges with 0.95 edge density. The subgraph is a NOT leaf in the hierarchy and its parent is the subgraph with the id of 7. Following 19 pairs of numbers are the edges; first id is the primary vertex, second is the secondary vertex.
+
+- Example: "./binucleus southern_woman.mtx WING YES" does wing decomposition and hierarchy construction
+	
+- To get the K values of vertices/edges, compile with 'K_VALUES=yes make'
+	
+- Please cite this paper if you use the code:
+
+    "Peeling Bipartite Networks for Dense Subgraph Discovery"
+     A. Erdem Sariyuce, Ali Pinar
+     International Conference on Web Search and Data Mining (WSDM), 2018
+
+- Contact a.erdemsariyuce@gmail.com for any questions/comments
+
+
+- If you're NOT looking for the projection experiments, ignore the rest.
+
+- 'EXPS=yes make -e' to compile for the projection experiments
+
+- RUN_CORE, RUN_WEIGHTED_CORE, and RUN_TRUSS options are available to run on projected graphs
+
+- Example:	Running truss decomposition on left projection of the input bipartite graph southern_woman.mtx:
+		- ./binucleus southern_woman.mtx BUILD_LEFT // constructs the weighted (and unweighted) projection 'southern_woman.mtx_BUILD_LEFT_W_projection.bin'
+  		- ./binucleus southern_woman.mtx_BUILD_LEFT_W_projection.bin RUN_TRUSS YES // runs truss decomposition on the projection
+  		- ./binucleus southern_woman.mtx MEASURE_LEFT southern_woman.mtx_BUILD_LEFT_W_projection.bin_RUN_CORE_NUCLEI // finds the bipartite subgraphs induced by the vertices in truss subgraphs and append each line in *NUCLEI file by the |PV|, |SV|, |E| and edge density. Truss subgraphs are defined on left vertices here, and the bipartite subgraph induced on those vertices is computed in this step. 
+
+- Example: Running weighted core decomposition on right projection of the input bipartite graph southern_woman.mtx:
+		- ./binucleus southern_woman.mtx BUILD_RIGHT
+  		- ./binucleus southern_woman.mtx_BUILD_RIGHT_W_projection.bin RUN_WEIGHTED_CORE YES
+  		- ./binucleus southern_woman.mtx MEASURE_RIGHT southern_woman.mtx_BUILD_RIGHT_W_projection.bin_RUN_WEIGHTED_CORE_NUCLEI 
+
+
+[1] Matrix market has ".txt" or ".mtx" suffix. Its format for a 2,3 biclique:
+% First line is |E|, |Left Vertices|, |Right Vertices|
+6 2 3
+0 0
+0 1
+0 2
+1 0
+1 1
+1 2
+
+[2] SNAP format for a 2,3 biclique:
+
+0 0
+0 1
+0 2
+1 0
+1 1
+1 2
+
+
+[4] Activate WRITE_BINARY macro in graph.cpp to write binary graph files with ".bin" suffix -- recommended for large graphs
+
+
+Todos:
+- fix VtxType and EdgeType to support lols
+- support lols by making everything vertex or edge type
+
+
+
+
+
+
+
+
+
+
+    
