@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	0.0.0	//
+!_TAG_PROGRAM_VERSION	0.0.0	/9757e4ff/
 .c.o	makefile.in	/^.c.o: $/;"	t
 .cpp.o	makefile.in	/^.cpp.o: $/;"	t
 AR	makefile.in	/^AR         = ar rv$/;"	m
