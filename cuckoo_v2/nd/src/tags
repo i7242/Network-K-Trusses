@@ -1,0 +1,132 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/9757e4ff/
+.c.o	makefile.in	/^.c.o: $/;"	t
+.cpp.o	makefile.in	/^.cpp.o: $/;"	t
+AR	makefile.in	/^AR         = ar rv$/;"	m
+CC	makefile.in	/^CC        = gcc$/;"	m
+CXX	makefile.in	/^CXX        = g++$/;"	m
+CXXFLAGS	makefile.in	/^CXXFLAGS   = $(FLAGS) -std=c++11$/;"	m
+CurrentValue	bucket.cpp	/^int Naive_Bucket::CurrentValue(int id) {$/;"	f	class:Naive_Bucket	typeref:typename:int
+DEBUG	makefile.in	/^DEBUG=no$/;"	m
+DecVal	bucket.cpp	/^void Naive_Bucket::DecVal(int id) {$/;"	f	class:Naive_Bucket	typeref:typename:void
+FLAGS	makefile.in	/^FLAGS      = -Wall -W -Wextra$/;"	m
+Free	bucket.cpp	/^void Naive_Bucket::Free () {$/;"	f	class:Naive_Bucket	typeref:typename:void
+Graph	main.h	/^typedef vector<vector<vertex> > Graph;$/;"	t	typeref:typename:vector<vector<vertex>>
+INC	makefile.in	/^INC        = $/;"	m
+Initialize	bucket.cpp	/^void Naive_Bucket::Initialize(int max_v, int nb_element) {$/;"	f	class:Naive_Bucket	typeref:typename:void
+Insert	bucket.cpp	/^void Naive_Bucket::Insert (int id, int value) {$/;"	f	class:Naive_Bucket	typeref:typename:void
+K	main.h	/^	vertex K;$/;"	m	struct:subcore	typeref:typename:vertex
+LDFLAGS	makefile.in	/^LDFLAGS    = $(FLAGS) $/;"	m
+LIBS	makefile.in	/^LIBS       = -lm$/;"	m
+LOWERBOUND	main.h	/^#define LOWERBOUND /;"	d
+MAXLINE	graph.cpp	/^#define MAXLINE /;"	d	file:
+Naive_Bucket	bucket.cpp	/^Naive_Bucket::Naive_Bucket()$/;"	f	class:Naive_Bucket
+Naive_Bucket	bucket.h	/^struct Naive_Bucket$/;"	s
+Naive_Bucket_element	bucket.cpp	/^Naive_Bucket_element::Naive_Bucket_element()$/;"	f	class:Naive_Bucket_element
+Naive_Bucket_element	bucket.h	/^struct Naive_Bucket_element$/;"	s
+OPT	makefile.in	/^OPT=yes$/;"	m
+PRIME	main.h	/^#define PRIME /;"	d
+PopMin	bucket.cpp	/^int Naive_Bucket::PopMin(int* id, int* ret_value) {$/;"	f	class:Naive_Bucket	typeref:typename:int
+RANLIB	makefile.in	/^RANLIB     = ranlib$/;"	m
+SRCS	makefile	/^SRCS	= $(CFILES:%=%.c) $(CXXFILES:%=%.cpp)$/;"	m
+TARGET	makefile	/^TARGET     = nucleus$/;"	m
+THRESHOLD	main.h	/^#define THRESHOLD /;"	d
+UPPERBOUND	main.h	/^#define UPPERBOUND /;"	d
+WRITE_BINARY	graph.cpp	/^#define WRITE_BINARY$/;"	d	file:
+__BUCKET__H	bucket.h	/^#define __BUCKET__H$/;"	d
+assignToRepresentative	hierarchy.cpp	/^inline void assignToRepresentative (vertex* ch, vector<subcore>& skeleton) { \/\/ 2-pass path co/;"	f	typeref:typename:void
+assignToRoot	hierarchy.cpp	/^inline void assignToRoot (vertex* ch, vector<subcore>& skeleton) {$/;"	f	typeref:typename:void
+base_k13	k1-3.cpp	/^void base_k13 (Graph& graph, bool hierarchy, edge nEdge, vector<vertex>& K, vertex* max13, strin/;"	f	typeref:typename:void
+base_k14	k1-4.cpp	/^void base_k14 (Graph& graph, bool hierarchy, edge nEdge, vector<vertex>& K, vertex* max14, strin/;"	f	typeref:typename:void
+base_k24	k2-4.cpp	/^void base_k24 (Graph& graph, bool hierarchy, edge nEdge, vector<vertex>& K, vertex* max24, strin/;"	f	typeref:typename:void
+base_k34	k3-4.cpp	/^void base_k34 (Graph& graph, bool hierarchy, edge nEdge, vector<vertex>& K, vertex* max34, strin/;"	f	typeref:typename:void
+base_kcore	kcore.cpp	/^void base_kcore (Graph& graph, bool hierarchy, edge nEdge, vector<vertex>& K, vertex* maxCore, s/;"	f	typeref:typename:void
+base_ktruss	ktruss.cpp	/^void base_ktruss (Graph& graph, bool hierarchy, edge nEdge, vector<vertex>& K, vertex* maxtruss,/;"	f	typeref:typename:void
+base_ktruss_storeTriangles	ktruss.cpp	/^void base_ktruss_storeTriangles (Graph& graph, bool hierarchy, edge nEdge, vector<vertex>& K, ve/;"	f	typeref:typename:void
+bfsHierarchy	util.cpp	/^void bfsHierarchy (vector<subcore>& skeleton, stack<vertex>& scs) {$/;"	f	typeref:typename:void
+buckets	bucket.h	/^	Naive_Bucket_element **buckets; \/* actual pointers to bucket heads *\/$/;"	m	struct:Naive_Bucket	typeref:typename:Naive_Bucket_element **
+buildHierarchy	hierarchy.cpp	/^void buildHierarchy (vertex cn, vector<vp>& relations, vector<subcore>& skeleton, vertex* nSubco/;"	f	typeref:typename:void
+ccc	makefile.in	/^ccc = gcc$/;"	m
+checkConnectedness	ktruss.cpp	/^inline int checkConnectedness (Graph& graph, Graph& orderedGraph, Graph& TC, vertex u, vertex v,/;"	f	typeref:typename:int
+children	main.h	/^	vector<vertex> children;$/;"	m	struct:subcore	typeref:typename:vector<vertex>
+clean	makefile	/^clean: $/;"	t
+color	util.cpp	/^double color (double ed) {$/;"	f	typeref:typename:double
+commons	util.cpp	/^inline vertex commons (vector<vertex>& a, vector<vertex>& b) {$/;"	f	typeref:typename:vertex
+count4cliques	k1-4.cpp	/^lol count4cliques (Graph& graph, Graph& orderedGraph, vector<vertex>& FC) {$/;"	f	typeref:typename:lol
+count4cliques	k2-4.cpp	/^lol count4cliques (Graph& graph, Graph& orderedGraph, vector<vertex>& xel, vector<vp>& el, vecto/;"	f	typeref:typename:lol
+count4cliques	k3-4.cpp	/^lol count4cliques (Graph& graph, Graph& orderedGraph, vector<vp>& el, vector<vertex>& xel, Graph/;"	f	typeref:typename:lol
+countTriangles	k1-3.cpp	/^lol countTriangles (Graph& graph, Graph& orderedGraph, vector<vertex>& TC) {$/;"	f	typeref:typename:lol
+countTriangles	ktruss.cpp	/^lol countTriangles (Graph& graph, Graph& orderedGraph, Graph& TC) {$/;"	f	typeref:typename:lol
+couple	main.h	/^typedef tuple<vertex, vertex> couple;$/;"	t	typeref:typename:tuple<vertex,vertex>
+createOrdered	main.h	/^inline void createOrdered (Graph& orderedGraph, Graph& graph) {$/;"	f	typeref:typename:void
+createOrderedIndexEdges	main.h	/^inline void createOrderedIndexEdges (Graph& graph, vector<vp>& el, vector<vertex>& xel, Graph& o/;"	f	typeref:typename:void
+createSkeleton	hierarchy.cpp	/^void createSkeleton (vertex u, initializer_list<vertex> neighbors, vertex* nSubcores, vector<ver/;"	f	typeref:typename:void
+create_triangleList	k3-4.cpp	/^void create_triangleList (Graph& orderedGraph, vector<vp>& el, Graph& orderedTris, vector<vt>& t/;"	f	typeref:typename:void
+current_min_value	bucket.h	/^	int current_min_value;$/;"	m	struct:Naive_Bucket	typeref:typename:int
+dummyLine	util.cpp	/^inline void dummyLine (subcore* sc, FILE* fp, vertex index) {$/;"	f	typeref:typename:void
+ed	main.h	/^	double ed;$/;"	m	struct:subcore	typeref:typename:double
+edge	main.h	/^typedef int edge; \/\/ edges are 32 bytes$/;"	t	typeref:typename:int
+el	main.h	/^	vector<vp>* el;$/;"	m	struct:helpers	typeref:typename:vector<vp> *
+elements	bucket.h	/^	Naive_Bucket_element *elements; \/* for direct access to bucket elements elements[id] is the id/;"	m	struct:Naive_Bucket	typeref:typename:Naive_Bucket_element *
+findRepresentative	util.cpp	/^inline void findRepresentative (vertex* child, vector<subcore>& skeleton) {$/;"	f	typeref:typename:void
+getEdgeId	main.h	/^inline vertex getEdgeId (vertex u, vertex v, vector<vertex>& xel, vector<vp>& el, Graph& graph) /;"	f	typeref:typename:vertex
+getTriangleId	k3-4.cpp	/^inline vertex getTriangleId (vertex u, vertex v, vertex w, vector<vertex>& xtris, vector<vp>& el/;"	f	typeref:typename:vertex
+hashUniquify	main.h	/^inline bool hashUniquify (vector<vertex>& vertices) {$/;"	f	typeref:typename:bool
+hash_combine	main.h	/^inline void hash_combine(std::size_t & seed, const T & v)$/;"	f	typeref:typename:void
+helpers	main.h	/^	helpers () {}$/;"	f	struct:helpers
+helpers	main.h	/^	helpers (vector<vp>* ael) {$/;"	f	struct:helpers
+helpers	main.h	/^	helpers (vector<vt>* atris) {$/;"	f	struct:helpers
+helpers	main.h	/^struct helpers {$/;"	s
+increment	k3-4.cpp	/^inline void increment (vertex u, vertex v, vertex w, vector<vertex>& xtris, vector<vp>& el, vect/;"	f	typeref:typename:void
+intersection	main.h	/^inline void intersection (vector<vertex>& a, vector<vertex>& b, vector<vertex>& c) {$/;"	f	typeref:typename:void
+less_than	main.h	/^inline bool less_than (vertex u, vertex v, Graph& graph) {$/;"	f	typeref:typename:bool
+lol	main.h	/^typedef long long lol;$/;"	t	typeref:typename:long long
+main	main.cpp	/^int main (int argc, char *argv[]) {$/;"	f	typeref:typename:int
+maxOrdered	k3-4.cpp	/^inline vertex maxOrdered (vertex a, vertex b, vertex c, Graph& graph) {$/;"	f	typeref:typename:vertex
+max_value	bucket.h	/^	int max_value;$/;"	m	struct:Naive_Bucket	typeref:typename:int
+merge	hierarchy.cpp	/^inline void merge (vertex u, vertex v, vector<vertex>& component, vector<subcore>& skeleton, int/;"	f	typeref:typename:void
+mmap	main.h	/^typedef unordered_multimap<int, int> mmap;$/;"	t	typeref:typename:unordered_multimap<int,int>
+nEdge	main.h	/^	edge nEdge;$/;"	m	struct:subcore	typeref:typename:edge
+nb_elements	bucket.h	/^	int nb_elements;$/;"	m	struct:Naive_Bucket	typeref:typename:int
+next	bucket.h	/^	Naive_Bucket_element * next;$/;"	m	struct:Naive_Bucket_element	typeref:typename:Naive_Bucket_element *
+nucleus	makefile	/^nucleus: main.o kcore.o k1-3.o k1-4.o ktruss.o k2-4.o k3-4.o hierarchy.o util.o bucket.o graph.o$/;"	t
+orderedConnected	main.h	/^inline bool orderedConnected (Graph& graph, Graph& orderedGraph, vertex u, vertex v) {$/;"	f	typeref:typename:bool
+parent	main.h	/^	vertex parent;$/;"	m	struct:subcore	typeref:typename:vertex
+presentNuclei	util.cpp	/^void presentNuclei (int variant, vector<subcore>& skeleton, vector<vertex>& component, Graph& gr/;"	f	typeref:typename:void
+prev	bucket.h	/^	Naive_Bucket_element * prev;$/;"	m	struct:Naive_Bucket_element	typeref:typename:Naive_Bucket_element *
+print_nested_circle	util.cpp	/^void print_nested_circle (vector<subcore>& hrc, int ind, FILE* fp, string cfl) {$/;"	f	typeref:typename:void
+print_time	main.h	/^inline void print_time (FILE* fp, const string& str, tms t) {$/;"	f	typeref:typename:void
+pullChildrenSets	util.cpp	/^bool pullChildrenSets (FILE* fp, vector<vertex>& children, unordered_map<vertex, vertex>& orderI/;"	f	typeref:typename:bool
+rank	main.h	/^	vertex rank;$/;"	m	struct:subcore	typeref:typename:vertex
+readBinary	graph.cpp	/^void readBinary(char *filename, vector<vector<VtxType>>& graph, EdgeType* nEdge) {$/;"	f	typeref:typename:void
+readEdgeList	graph.cpp	/^void readEdgeList (bool mm, char *filename, Graph& graph, EdgeType* nEdge) {$/;"	f	typeref:typename:void
+readGraph	graph.cpp	/^void readGraph (char *filename, vector<vector<VtxType>>& graph, EdgeType* nEdge) {$/;"	f	typeref:typename:void
+really_read	graph.cpp	/^static int really_read(std::istream& is, char* buf, size_t global_size) {$/;"	f	typeref:typename:int	file:
+rearrange	util.cpp	/^void rearrange (vector<subcore>& skeleton) { \/\/ rearrange children and parents based on visibi/;"	f	typeref:typename:void
+removeChild	util.cpp	/^inline void removeChild (vertex i, vector<subcore>& backup) {$/;"	f	typeref:typename:void
+reportSubgraph	util.cpp	/^void reportSubgraph (int variant, vertex index, unordered_map<vertex, vertex>& orderInFile, vect/;"	f	typeref:typename:void
+root	main.h	/^	vertex root;$/;"	m	struct:subcore	typeref:typename:vertex
+shake	k3-4.cpp	/^inline void shake (vertex m, vertex u, vertex v, vertex w, vertex* a, vertex* b, Graph& graph) {$/;"	f	typeref:typename:void
+size	main.h	/^	vertex size;$/;"	m	struct:subcore	typeref:typename:vertex
+std	main.h	/^namespace std$/;"	n
+store	hierarchy.cpp	/^inline void store (vertex uComp, vertex vComp, vector<vertex>& unassigned, vector<vp>& relations/;"	f	typeref:typename:void
+storeCountTriangles	ktruss.cpp	/^lol storeCountTriangles (Graph& graph, Graph& orderedGraph, Graph& TC, vector<vertex>& xel, Grap/;"	f	typeref:typename:lol
+subcore	main.h	/^	subcore (vertex k) {$/;"	f	struct:subcore
+subcore	main.h	/^struct subcore {$/;"	s
+threeWay	k3-4.cpp	/^inline void threeWay (vector<vertex>& x, vector<vertex>& y, vector<vertex>& z, vector<vertex>& c/;"	f	typeref:typename:void
+tms	main.h	/^typedef chrono::duration<double> tms;$/;"	t	typeref:typename:chrono::duration<double>
+triple	main.h	/^typedef tuple<vertex, vertex, vertex> triple;$/;"	t	typeref:typename:tuple<vertex,vertex,vertex>
+tris	main.h	/^	vector<vt>* tris;$/;"	m	struct:helpers	typeref:typename:vector<vt> *
+updateUnassigned	hierarchy.cpp	/^void updateUnassigned (vertex t, vector<vertex>& component, vertex* cid, vector<vp>& relations, /;"	f	typeref:typename:void
+values	bucket.h	/^	int *values; \/* needed for update, in case bucket head changed. *\/$/;"	m	struct:Naive_Bucket	typeref:typename:int *
+vertex	main.h	/^typedef int vertex; \/\/ vertices are 32 bytes$/;"	t	typeref:typename:int
+visible	main.h	/^	bool visible;$/;"	m	struct:subcore	typeref:typename:bool
+vp	main.h	/^typedef pair<vertex, vertex> vp;$/;"	t	typeref:typename:pair<vertex,vertex>
+vt	main.h	/^typedef tuple<vertex, vertex, vertex> vt;$/;"	t	typeref:typename:tuple<vertex,vertex,vertex>
+writeBinary	graph.cpp	/^void writeBinary (char* filename, VtxType nVtx, EdgeType nEdge, vector<vector<VtxType>>& graph) /;"	f	typeref:typename:void
+~Naive_Bucket	bucket.cpp	/^Naive_Bucket::~Naive_Bucket() {$/;"	f	class:Naive_Bucket

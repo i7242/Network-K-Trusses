@@ -1,0 +1,44 @@
+This is the note for the reading and understanding of Prof. Sariyuce's code.
+
+1. 23: indicate the k-truss decomposition
+
+2. readGraph():
+    Graph: vector<vector<vertex>> graph
+        adjacency/neighbor list
+        each neighbor list is sorted (find common neighbor in O(n))
+        each row corresponds to a vertex
+        each col corresponds to a neighbor of cur vertex
+
+3. K & maxK:
+    K: vector<vertex>, final k value for each edge
+    maxK: maximum k value
+
+4. base_ktruss():
+    1> CSR-like structure ???
+    2> el[u, v]: edge list, u less_than v
+    3> xel: saves the size of el after each vertex u is checked
+    4> orientedGraph:
+        G[u][v]: u_deg < v_deg || (u_deg == v_deg && u < v)
+        in directed graph, each edge appears once
+    5> TC vector<vector<vertex>>:
+        triangle count for each edge
+        since the vertices are ordered by degree and index, will not have duplicated counting
+    6> Naive_Bucket nBucket
+        buckets: bucket index is the triangle count
+            bucket is array of list, points to elements inside it
+        elements: each edge is an element
+        values: triangle count value for each edge/element
+    7> intersection():
+        two sorted list, find intersection in O(m + n) time
+    8> DecVal():
+        decrease value for edge/element in bucket
+        no need to decrease value when current value == min
+        move element in bucket at the same time
+        if K[i] != -1, the triangle has been removed
+
+Cuckoo Hash/Filter
+Usage:
+    1> establish vector of filters for each vertex
+    2> add cuckoo filter check after #30 in "main.cpp", to reject earlier
+    3> it may applied to #144 "intersection", but need to use lower level data than API
+    4> 
